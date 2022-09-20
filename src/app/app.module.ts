@@ -1,3 +1,4 @@
+import { FormsModule } from '@angular/forms';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
@@ -9,6 +10,7 @@ import { AboutComponent } from './modules/general/about/about.component';
 import { SigninComponent } from './modules/general/signin/signin.component';
 import { NotFoundComponent } from './modules/general/not-found/not-found.component';
 import { ProduitComponent } from './produit/produit.component';
+import { LivresComponent } from './livres/livres.component';
 
 @NgModule({
   declarations: [
@@ -18,11 +20,14 @@ import { ProduitComponent } from './produit/produit.component';
     AboutComponent,
     SigninComponent,
     NotFoundComponent,
-    ProduitComponent
+    ProduitComponent,
+    LivresComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
+    
   ],
   providers: [],
   bootstrap: [AppComponent]

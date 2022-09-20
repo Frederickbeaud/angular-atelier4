@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-produit',
@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProduitComponent implements OnInit {
     NomSte: string='AB Entreprise';
+    @Input() nomclient: string | undefined;
     produit=[
       {id:'1',designation:'chaussure',prix:'50',Qte:'3'},
       {id:'2',designation:'robe',prix:'150',Qte:'5'},
