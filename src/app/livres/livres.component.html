@@ -1,14 +1,18 @@
 <div class="container">
     <div class="row">
         <div class="col-md-4 mx-auto" *ngFor="let liv of livres">
-            <div class="card  text-center" >
-                <div clas="card-header"><button type="button" class="btn btn-danger" >
-                    <span class="badge badge-danger"></span>
-                </button></div>
-                <a [routerLink]="['/livres/',liv.id]"></a>
-            <div class="card-body">
-                <img src="card-img-top" alt="{{liv.imageUrl}}">
-            </div>
+            <div class="card">
+                <div clas="card-header text-center">
+                    <h3>
+                        <span class="badge badge-danger">New</span>
+                    </h3>
+                
+                    <a class="text-decoration-none" [routerLink]="['/livres/',liv.id]">{{liv.titre | uppercase}}</a>
+                </div>   
+                     <div class="card-body">
+                        <img class="card-img-top img-fluid" src="{{liv.imageUrl}}">
+            
+                     </div>
             </div>
         </div>
     </div>

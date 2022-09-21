@@ -11,6 +11,7 @@ import { SigninComponent } from './modules/general/signin/signin.component';
 import { NotFoundComponent } from './modules/general/not-found/not-found.component';
 import { ProduitComponent } from './produit/produit.component';
 import { LivresComponent } from './livres/livres.component';
+import { RetourLivreComponent } from './retour-livre/retour-livre.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { LivresComponent } from './livres/livres.component';
     SigninComponent,
     NotFoundComponent,
     ProduitComponent,
-    LivresComponent
+    LivresComponent,
+    RetourLivreComponent
   ],
   imports: [
     BrowserModule,
