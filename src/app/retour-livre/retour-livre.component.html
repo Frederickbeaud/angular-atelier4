@@ -1,11 +1,25 @@
 <div class="container">
+    <div class="text-center"></div><a class="btn btn-info mt-5" routerLink="">Revoir tous les livres</a>
     <div class="row">
-        <div class="">
-                <div>
- 
-                </div>  
-                 <div>
-                </div>
+        <div class="col-md-4 mx-auto">
+             <div class="card">
+                <img class="card-img-top" src="{{liv.imageUrl}}" width="40" height="300">
+             <div class="card-body" [ngStyle]="{color:getColor()}"
+             [ngClass]="{'list-group-item':true,
+             'list-group-item-success':liv.commander=='oui',
+             'list-group-item-danger':liv.commander=='non'}">
+             <h4 class="card-title">
+                <div>{{liv?.titre | uppercase}}</div>
+                {{liv?.date | date:'fulldate'}}
+             </h4>  
+                <span *ngIf="liv.commander == 'oui'"> 
+                    <input type="checkbox" checked="checked" class="form-control" (click)="reinitialiser()">
+                </span>
+            <div *ngIf="liv.commander=='non'">  
+                <button class="btn btn-success" (click)="onObtenir()">Commander</button>
+             </div>   
+            </div>
+            </div>
         </div>
     </div>
 </div>

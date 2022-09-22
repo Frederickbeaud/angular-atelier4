@@ -7,6 +7,7 @@ import { HomeComponent } from './modules/general/home/home.component';
 import { NotFoundComponent } from './modules/general/not-found/not-found.component';
 import { SigninComponent } from './modules/general/signin/signin.component';
 import { ProduitComponent } from './produit/produit.component';
+import { RetourLivreComponent } from './retour-livre/retour-livre.component';
 
 const routes: Routes = [
   {path:'',component:HomeComponent},
@@ -15,7 +16,8 @@ const routes: Routes = [
   {path:'signin',component:SigninComponent},
   {path:'produit',component:ProduitComponent},
   {path:'livres',component:LivresComponent},
-  {path:'**',component:NotFoundComponent}
+  {path:'**',component:NotFoundComponent},
+  {path:'livre/id',component:RetourLivreComponent}
 ];
 
 @NgModule({
